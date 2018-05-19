@@ -590,5 +590,12 @@
     <limit effort="0" lower="0" upper="0.8" velocity="0"/>
     <mimic joint="left_gripper"/>
   </joint>
+  <link name="base_link"/>
+  <joint name="leftbase_displacement" type="fixed">
+    <origin rpy="-3.14 0 0" xyz="-0.2 0 0"/>
+    <parent link="base_link"/>
+    <child link="left_base_link"/>
+    <axis xyz="0 0 0"/>
+  </joint>
 </robot>
 
