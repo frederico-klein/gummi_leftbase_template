@@ -1,12 +1,12 @@
-left_shoulder_extensor_controller:
+head_yaw_controller:
     controller:
         package: dynamixel_controllers
         module: joint_position_controller
         type: JointPositionController
-    joint_name: left_shoulder_extensor
-    joint_speed: 100
+    joint_name: head_yaw
+    joint_speed: 1.5
     motor:
-        id: 5
-        init: 14333
+        id: 101
+        init: 512
         min: 0
-        max: 26618
+        max: 1023

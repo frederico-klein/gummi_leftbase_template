@@ -1,12 +1,12 @@
-left_shoulder_pitch_encoder_controller:
+upperarm_roll_controller:
     controller:
         package: dynamixel_controllers
         module: joint_position_controller
         type: JointPositionController
-    joint_name: left_shoulder_pitch_encoder
-    joint_speed: 0.5
+    joint_name: upperarm_roll
+    joint_speed: 1.25
     motor:
-        id: 11
-        init: 512
+        id: 12
+        init: 2048
         min: 0
-        max: 1023
+        max: 4095

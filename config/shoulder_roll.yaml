@@ -3,15 +3,15 @@ equilibrium:
     sign: 1
     signFlexor: 1
     signExtensor: -1
-    nameFlexor: "left_shoulder_flexor"
-    nameExtensor: "left_shoulder_extensor"
+    nameFlexor: "shoulder_flexor"
+    nameExtensor: "shoulder_extensor"
     servoRange: 12.5664
     servoOffset: 0
     loadLimit: 0.5  # Testing limitLoad method in equilibrium_model.py.
 signEncoder: 1
 signJoint: 1
-name: "left_shoulder_roll"
-nameEncoder: "left_shoulder_roll_encoder"
+name: "shoulder_roll"
+nameEncoder: "shoulder_roll_encoder"
 minAngle: -0.95
 maxAngle: 1.66
 maxAbsForwardError: 0.6

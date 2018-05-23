@@ -1,12 +1,12 @@
-left_shoulder_roll_encoder_controller:
+triceps_controller:
     controller:
         package: dynamixel_controllers
         module: joint_position_controller
         type: JointPositionController
-    joint_name: left_shoulder_roll_encoder
-    joint_speed: 0.5
+    joint_name: triceps
+    joint_speed: 100.0
     motor:
-        id: 1
-        init: 512
+        id: 14
+        init: 14333
         min: 0
-        max: 1023
+        max: 26618

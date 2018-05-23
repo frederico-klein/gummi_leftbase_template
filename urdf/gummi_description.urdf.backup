@@ -3,7 +3,7 @@
 <robot
   name="gummi">
   <link
-    name="left_base_link">
+    name="base_link">
     <inertial>
       <origin
         xyz="-0.096576 0.093216 -0.5062"
@@ -24,7 +24,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_leftbase_template/meshes/left_base_link.STL" />
+          filename="package://gummi_leftbase_template/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -38,14 +38,14 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_leftbase_template/meshes/left_base_link.STL" />
+          filename="package://gummi_leftbase_template/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
 
   <!-- j1_Link -->
   <link
-    name="left_shoulder_preroll">
+    name="shoulder_preroll">
     <inertial>
       <origin
         xyz="-3.1428E-06 -0.0073636 0.053528"
@@ -87,15 +87,15 @@
 
   <!-- j1 -->
   <joint
-    name="left_shoulder_yaw"
+    name="shoulder_yaw"
     type="revolute">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="left_base_link" />
+      link="base_link" />
     <child
-      link="left_shoulder_preroll" />
+      link="shoulder_preroll" />
     <axis
       xyz="0 0 1" />
     <!-- <limit
@@ -108,7 +108,7 @@
 
   <!-- j2_Link -->
   <link
-    name="left_shoulder">
+    name="shoulder">
     <inertial>
       <origin
         xyz="-7.4885E-05 -0.045317 5.3695E-06"
@@ -150,15 +150,15 @@
 
   <!-- j2 -->
   <joint
-    name="left_shoulder_roll"
+    name="shoulder_roll"
     type="revolute">
     <origin
       xyz="0 0 0.126"
       rpy="0 0 0" />
     <parent
-      link="left_shoulder_preroll" />
+      link="shoulder_preroll" />
     <child
-      link="left_shoulder" />
+      link="shoulder" />
     <axis
       xyz="0 -1 0" />
     <!-- <limit
@@ -171,7 +171,7 @@
 
   <!-- j3_Link -->
   <link
-    name="left_upperarm_preroll">
+    name="upperarm_preroll">
     <inertial>
       <origin
         xyz="-0.0021446 -0.0092567 -0.047728"
@@ -213,15 +213,15 @@
 
   <!-- j3 -->
   <joint
-    name="left_shoulder_pitch"
+    name="shoulder_pitch"
     type="revolute">
     <origin
       xyz="0 -0.1185 0"
       rpy="0 0 0" />
     <parent
-      link="left_shoulder" />
+      link="shoulder" />
     <child
-      link="left_upperarm_preroll" />
+      link="upperarm_preroll" />
     <axis
       xyz="-1 0 0" />
 <!-- <limit
@@ -234,7 +234,7 @@
 
   <!-- j4_Link -->
   <link
-    name="left_upperarm">
+    name="upperarm">
     <inertial>
       <origin
         xyz="-0.0024868 -9.272E-05 -0.088372"
@@ -276,15 +276,15 @@
 
   <!-- j4 -->
   <joint
-    name="left_upperarm_roll"
+    name="upperarm_roll"
     type="revolute">
     <origin
       xyz="0.0135 -0.01 -0.081"
       rpy="0 0 0" />
     <parent
-      link="left_upperarm_preroll" />
+      link="upperarm_preroll" />
     <child
-      link="left_upperarm" />
+      link="upperarm" />
     <axis
       xyz="0 0 -1" />
     <!-- <limit
@@ -297,7 +297,7 @@
 
   <!-- j5_Link -->
   <link
-    name="left_lowerarm_preroll">
+    name="lowerarm_preroll">
     <inertial>
       <origin
         xyz="0.0478250427975905 -0.000316437232932051 -0.0106413204754627"
@@ -339,15 +339,15 @@
 
   <!-- j5 -->
   <joint
-    name="left_elbow"
+    name="elbow"
     type="revolute">
     <origin
       xyz="0 0 -0.1898"
       rpy="0 0 0" />
     <parent
-      link="left_upperarm" />
+      link="upperarm" />
     <child
-      link="left_lowerarm_preroll" />
+      link="lowerarm_preroll" />
     <axis
       xyz="0 -1 0" />
     <!-- <limit
@@ -360,7 +360,7 @@
 
   <!-- j6_Link -->
   <link
-    name="left_lowerarm">
+    name="lowerarm">
     <inertial>
       <origin
         xyz="0.063088 -4.524E-06 0.010537"
@@ -408,9 +408,9 @@
       xyz="0.0795 0.00025 -0.025"
       rpy="0 0 0" />
     <parent
-      link="left_lowerarm_preroll" />
+      link="lowerarm_preroll" />
     <child
-      link="left_lowerarm" />
+      link="lowerarm" />
     <axis
       xyz="1 0 0" />
     <!-- <limit
@@ -471,7 +471,7 @@
       xyz="0.084137 0 0.009003"
       rpy="0 0 0" />
     <parent
-      link="left_lowerarm" />
+      link="lowerarm" />
     <child
       link="wrist" />
     <axis

@@ -1,12 +1,12 @@
-left_biceps_controller:
+shoulder_abductor_controller:
     controller:
         package: dynamixel_controllers
         module: joint_position_controller
         type: JointPositionController
-    joint_name: left_biceps
-    joint_speed: 100.0
+    joint_name: shoulder_abductor
+    joint_speed: 100
     motor:
-        id: 13
+        id: 2
         init: 14333
         min: 0
         max: 26618

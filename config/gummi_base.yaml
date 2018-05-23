@@ -5,28 +5,28 @@ velocity_control: 0
 # motor controller names from gummi_dynamixel.
 
 joints:
-  left_shoulder_yaw:
+  shoulder_yaw:
     effort: 0.4
     gradual_startup_position: 0
     gradual_startup_time: 1.0
     antagonist: True
-  left_shoulder_roll:
+  shoulder_roll:
     effort: 0.25
     gradual_startup_position: 0
     gradual_startup_time: 1.0
     antagonist: True
-  left_shoulder_pitch:
+  shoulder_pitch:
     effort: 0.6
     gradual_startup_position: 0.25
     gradual_startup_time: 1.0
     antagonist: True
-  left_elbow:
+  elbow:
     effort: 0.001
     gradual_startup_position: 2.0
     gradual_startup_time: 1.0
     antagonist: True
   # antagonist: False => direct driven joint
-  left_upperarm_roll:
+  upperarm_roll:
     effort: 999.9
     gradual_startup_position: 0
     gradual_startup_time: 1.0

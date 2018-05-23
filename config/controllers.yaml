@@ -3,11 +3,11 @@ controller_list:
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     joints:
-      - left_shoulder_yaw
-      - left_shoulder_roll
-      - left_shoulder_pitch
-      - left_upperarm_roll
-      - left_elbow
+      - shoulder_yaw
+      - shoulder_roll
+      - shoulder_pitch
+      - upperarm_roll
+      - elbow
       - forearm_roll
       - wrist_pitch
   # - name: fake_left_gripper_controller

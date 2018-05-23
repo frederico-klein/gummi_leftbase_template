@@ -11,13 +11,13 @@ First set up a workspace
 
 Fork or clone this repository:
 
-`$ git clone https://github.com/GummiArmCE/gummi_leftbase_template.git` 
+`$ git clone https://github.com/GummiArmCE/gummi_leftbase_template.git`
 
 Download a suitable ee package, e. g., handshake:
 
 `$ git clone https://github.com/GummiArmCE/gummi_leftee_handshake.git`
 
-To actually move the robot you will need either ros-\<YOUR-ROS-DISTRO\>-dynamixel-motor package installed or to you can clone the git from https://github.com/arebgun/dynamixel_motor.git . You will also need the gummi_interface package and if you want to use move-it, the gummi_moveit package: 
+To actually move the robot you will need either ros-\<YOUR-ROS-DISTRO\>-dynamixel-motor package installed or to you can clone the git from https://github.com/arebgun/dynamixel_motor.git . You will also need the gummi_interface package and if you want to use move-it, the gummi_moveit package:
 
     $ git clone https://github.com/arebgun/dynamixel_motor.git
     $ git clone https://github.com/GummiArmCE/gummi_interface.git
@@ -60,7 +60,7 @@ Edit the file package.xml
 
 `$ gedit package.xml`
 
-And change `<name>gummi_leftbase_template</name>` to  `<name>gummi_leftbase_YOUR_OWN_BASE</name>` (required finding the meshes - and textures if any- in the urdf file). 
+And change `<name>gummi_leftbase_template</name>` to  `<name>gummi_leftbase_YOUR_OWN_BASE</name>` (required finding the meshes - and textures if any- in the urdf file).
 
 You can now proceed to change "gummi_leftbase_YOUR_OWN_BASE/launch/controllers_base.launch" to contain the motor drivers that your base has and where they are connected in the bus and the updating the yaml definitions of joints in "gummi_leftbase_YOUR_OWN_BASE/dynamixel"
 
@@ -70,7 +70,7 @@ Currently the urdf file is being generated during the catkin_make routine from t
 
 The simple setup we planned it to have all joint and link definitions for the base in the "gummi_description_base.urdf.xacro" (as well as "gummi_description_ee.urdf.xacro" containing the joints and links for the end effector only) and the file "gummi_description.urdf.xacro" would just call both and include them.
 
-To change this to a new setup, simple either write by hand, or generate it from a solidworks model the URDF file as usual and place the joints and links from gripper up to the left_elbow joint (inclusive) in the end-effector xacro file and the remainder joints and links, that is, from base to left_elbow (exclusive) in the base urdf xacro file
+To change this to a new setup, simple either write by hand, or generate it from a solidworks model the URDF file as usual and place the joints and links from gripper up to the elbow joint (inclusive) in the end-effector xacro file and the remainder joints and links, that is, from base to elbow (exclusive) in the base urdf xacro file
 
 TO DO:
  - finish separating yaml files
@@ -78,7 +78,7 @@ TO DO:
 
 ## New in this version (v1.0.0):
 
-- First stable and tested version with the dovetail design. Tested with planning via moveit integration. 
+- First stable and tested version with the dovetail design. Tested with planning via moveit integration.
 - Decided to use branches instead of new repositories to keep all the different base definitions.
 
 ##
